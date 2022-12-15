@@ -39,6 +39,7 @@
     "@vechain/connex-types": "^2.0.12",
     "axios": "^0.21.1",
     "bignumber.js": "^7.2.1",
+    "graphene-pk11": "^2.3.2",
     "isomorphic-ws": "^4.0.1",
     "lru-cache": "^5.1.1",
     "thor-devkit": "^2.0.5",
