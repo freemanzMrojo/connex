@@ -50,7 +50,7 @@ export class Driver extends DriverNoVendor {
         net: Net,
         genesis: Connex.Thor.Block,
         initialHead?: Connex.Thor.Status['head'],
-        private readonly wallet?: Wallet
+        readonly wallet?: Wallet
     ) {
         super(net, genesis, initialHead)
     }
