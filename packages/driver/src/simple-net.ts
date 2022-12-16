@@ -39,9 +39,10 @@ export class SimpleNet implements Net {
                 params.validateResponseHeader(resp.headers)
             }
             return resp.data
-        } catch (err) {
-            if (err.isAxiosError) {
-                throw convertError(err)
+        } catch (error) {
+            const err = error as Error;
+            if (Axios.isAxiosError(err)) {
+                throw convertError(err as AxiosError)
             }
             throw new Error(`${method} ${resolve(this.baseURL, path)}: ${err.message}`)
         }
